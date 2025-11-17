@@ -28,11 +28,11 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Книга " + name + ", " + author.toString() + ", год публикации: " + yearPublication;
+        return "Книга " + name + ", " + author + ", год публикации: " + yearPublication;
     }
 
     @Override
-    public boolean equals (Objects other) {
+    public boolean equals (Object other) {
         if (this == other)
             return true;
         if (!(other instanceof Book))
