@@ -11,5 +11,8 @@ public class Main {
                 " " + book1.getAuthor().getFamily() + ", Год публикации: " + book1.getYearPublication());
         System.out.println("Книга " + book2.getName() + ", Автор " + book2.getAuthor().getName() +
                 " " + book2.getAuthor().getFamily() + ", Год публикации: " + book2.getYearPublication());
+
+        System.out.println(book1.equals(book2));
+        System.out.println(book2);
     }
 }

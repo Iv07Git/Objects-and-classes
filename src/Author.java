@@ -1,17 +1,41 @@
+import java.util.Objects;
+
 public class Author {
-    private String name;
-    private String family;
+    private String firstName;
+    private String lastName;
 
-    public Author (String name, String family) {
-        this.name = name;
-        this.family = family;
+    public Author (String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
 
-    public String getName () {
-        return this.name;
+    public String getFirstName () {
+        return this.firstName;
     }
 
-    public String getFamily () {
-        return this.family;
+    public String getLastName () {
+        return this.lastName;
     }
+
+        @Override
+        public String toString () {
+            return "Автор: " + this.firstName + " " + this.lastName;
+        }
+
+        @Override
+        public boolean equals (Object obj) {
+            if (this == obj) {
+                return true;
+            }
+            if (obj == null || getClass() != obj.getClass()) {
+                return false;
+            }
+            Author author = (Author) obj;
+            return Objects.equals(firstName, author.firstName) && Objects.equals(lastName, author.lastName);
+        }
+
+        @Override
+        public int hashCode () {
+            return Objects.hash(firstName, lastName);
+        }
 }
